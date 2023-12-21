@@ -8,8 +8,8 @@ import { ethers } from 'ethers'
 import { getWalletClient } from '@wagmi/core'
 import { useNetwork } from 'wagmi'
 
-const RAFFLE_NUMBER = 4
-const RAFFLE_ADDRESS = '0xc2A791CdE67Ab6BE98d7f0aD890BD39d08D1563e'
+const RAFFLE_NUMBER = 1
+const RAFFLE_ADDRESS = '0x321443637A0a608123E557989E99c1DbB27e774c'
 
 interface IRaffle {
   raffleOwner: string
@@ -119,6 +119,7 @@ const Raffle = () => {
             <Text>NFT Address: {raffleData?.nftAddress}</Text>
             <Text>Token ID: {raffleData?.tokenId?.toString()}</Text>
             <Text>Tickets Sold: {raffleData?.ticketOwners?.length}</Text>
+            <Text>Sequence ID: {raffleData?.sequenceNumber.toString()}</Text>
             <Text>
               Winning Ticket: {raffleData?.winningTicket?.toString() || '...'}
             </Text>
